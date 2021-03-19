@@ -6,4 +6,6 @@ public class UserConfig {
     public static final String USER_LAST_NAME = "Auto_Last_Name";
     public static final String USER_PHONE_NUMBER = "9009009999";
     public static final String USER_FIRST_NAME = "Auto_First_Name";
+    public static final String GET_CODE_URL = "http://192.168.67.31/api/autotest/get-autorization-code?phone=";
+
 }

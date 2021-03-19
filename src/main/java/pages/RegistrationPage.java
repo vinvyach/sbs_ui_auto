@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
+/**
+ * страница регистрации нового пользователя
+ */
 public class RegistrationPage {
 
     public void clickButtonSpan(String text) {
@@ -17,5 +20,8 @@ public class RegistrationPage {
         } else return false;
     }
 
+    public void insertCode(String code) {
+        $(By.xpath("//*[@id=\"individual-form\"]/div[3]/div[2]/div/div/div/div/input")).setValue(code);
+    }
 
 }

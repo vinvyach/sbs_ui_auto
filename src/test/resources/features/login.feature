@@ -17,10 +17,10 @@ Feature: Login User
     Then Input Phone Number
     Then Input First Name
     Then Click "Go" buttonb spanb
-#    Then Click "Отправить код"
-#    Then Click "Ввести код"
-#    Then Click "Проверить код"
-#    Then Content with "Код подтверждён" visible
-#    Then Click "Зарегистрироваться"
-#    Then lk "Submit" button span
-#    Then Content with "Вы всегда можете позвонить нам и узнать нужную информацию" visible
+    Then Click "Отправить код" button getCode
+    Then Insert code
+    Then Click "Проверить код" button checkCode
+    Then Content with "Код подтверждён" visible
+    Then Click "Зарегистрироваться" button reg
+    Then lk "Submit" button span
+    Then Content with "Вы всегда можете позвонить нам и узнать нужную информацию" visible

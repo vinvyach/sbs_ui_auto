@@ -19,6 +19,8 @@ repositories {
 }
 
 dependencies {
+    implementation group: 'org.springframework', name: 'spring-web', version: '5.2.6.RELEASE'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.16.18'
     testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
     testImplementation "io.cucumber:cucumber-junit:${cucumberVersion}"
 

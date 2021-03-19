@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.*;
 
+/**
+ * это главная
+ */
 public class BasicPage {
 
     /*public void clickButton(String text) {
@@ -55,10 +58,25 @@ public class BasicPage {
         } else return false;
     }
 
-
+    /**
+     * этот метод делает: нажимает на одну из кнопок на одной странице в одном шаге. Вот.
+     *
+     * @param text
+     */
     public void clickButtonbSpanb(String text) {
         $(By.xpath("//*[@id=\"contact-details\"]/div[3]/div[2]/button/span")).click();
     }
 
 
+    public void clickButtonGetCode(String text) {
+        $(By.xpath("//*[@id=\"individual-form\"]/div[3]/div[2]/button/span")).click();
+    }
+
+    public void clickButtonCheckCode(String arg0) {
+        $(By.xpath("//*[@id=\"individual-form\"]/div[3]/div[3]/button/span")).click();
+    }
+
+    public void clickButtonReg(String arg0) {
+        $(By.xpath("//*[@id=\"individual-form\"]/div[6]/div[2]/button/span")).click();
+    }
 }
