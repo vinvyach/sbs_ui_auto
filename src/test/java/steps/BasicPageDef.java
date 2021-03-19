@@ -81,25 +81,19 @@ public class BasicPageDef {
     }
 
 
-
-
     @Then("Del user")
-    public void createPost(){
-    // request url
-    String url = "http://192.168.67.31/api/autotest/delete-client";
+    public void createPost() {
+        // request url
+        String url = "http://192.168.67.31/api/autotest/delete-client";
 
-    // request body parameters
-    Map<String, String> map = new HashMap<>();
-    map.put("phone", "9009009980");
+        // request body parameters
+        Map<String, String> map = new HashMap<>();
+        map.put("phone", "9009009980");
 
-    // send POST request
-    ResponseEntity<Void> response = restTemplate.postForEntity(url, map, Void.class);
+        // send POST request
+        ResponseEntity<Void> response = restTemplate.postForEntity(url, map, Void.class);
 
     }
-
-
-
-
 
     @Then("Click {string} button checkCode")
     public void click(String arg0) {
