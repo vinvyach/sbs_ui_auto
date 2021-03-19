@@ -9,7 +9,8 @@ import pages.BasicPage;
 import pages.RegistrationPage;
 import pages.entity.Code;
 
-import java.util.Objects;
+import java.util.HashMap;
+import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -78,6 +79,27 @@ public class BasicPageDef {
                 = restTemplate.getForEntity(resourceUrl + phoneNumber, Code.class);
         return response;
     }
+
+
+
+
+    @Then("Del user")
+    public void createPost(){
+    // request url
+    String url = "http://192.168.67.31/api/autotest/delete-client";
+
+    // request body parameters
+    Map<String, String> map = new HashMap<>();
+    map.put("phone", "9009009980");
+
+    // send POST request
+    ResponseEntity<Void> response = restTemplate.postForEntity(url, map, Void.class);
+
+    }
+
+
+
+
 
     @Then("Click {string} button checkCode")
     public void click(String arg0) {

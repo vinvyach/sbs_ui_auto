@@ -6,3 +6,5 @@ steps/SignInPageDef.java
  steps.SignInPageDef
 RunCucumberTest.java
  RunCucumberTest
+steps/Post.java
+ steps.Post

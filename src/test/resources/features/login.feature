@@ -24,3 +24,4 @@ Feature: Login User
     Then Click "Зарегистрироваться" button reg
     Then lk "Submit" button span
     Then Content with "Вы всегда можете позвонить нам и узнать нужную информацию" visible
+    Then Del user

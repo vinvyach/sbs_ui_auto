@@ -8,6 +8,8 @@ pages/entity/Code.java
  pages.entity.Code
 pages/RegistrationPage.java
  pages.RegistrationPage
+pages/entity/Void.java
+ pages.entity.Void
 config/EnvConfig.java
  config.EnvConfig
 pages/BasicPage.java
