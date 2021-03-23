@@ -38,7 +38,8 @@ public class BasicPageDef {
     }
 
     @Then("lk {string} button span")
-    public void lkButtonSpanb(String arg0) {
+    public void lkButtonSpanb(String arg0) throws InterruptedException {
+        Thread.sleep(20000);
         basicPage.clickButtonSpanb(arg0);
     }
 
@@ -47,7 +48,7 @@ public class BasicPageDef {
     public void openPage(String arg0) {
         open(EnvConfig.URI_LOGIN + arg0);
 
-        if (registrationPage.checkTextExist("IT Услуга использует файлы cookies")) {
+        if (registrationPage.checkTextExist("OK")) {
             registrationPage.clickButtonSpan("OK");
         }
 
@@ -61,6 +62,10 @@ public class BasicPageDef {
     @Then("Click {string} button getCode")
     public void clickButtonGetCode(String arg0) {
         basicPage.clickButtonGetCode(arg0);
+
+        if (basicPage.checkTextExist("OK")) {
+            basicPage.clickButtonSpan("OK");
+        }
     }
 
     @Then("Insert code")
@@ -88,7 +93,7 @@ public class BasicPageDef {
 
         // request body parameters
         Map<String, String> map = new HashMap<>();
-        map.put("phone", "9009009980");
+        map.put("phone", UserConfig.USER_PHONE_NUMBER);
 
         // send POST request
         ResponseEntity<Void> response = restTemplate.postForEntity(url, map, Void.class);
@@ -103,5 +108,9 @@ public class BasicPageDef {
     @Then("Click {string} button reg")
     public void clickButtonReg(String arg0) {
         basicPage.clickButtonReg(arg0);
+
+        if (registrationPage.checkTextExist("OK")){
+            registrationPage.clickButtonSpan("OK");
+        }
     }
 }
