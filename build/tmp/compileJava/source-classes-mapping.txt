@@ -12,5 +12,7 @@ pages/entity/Void.java
  pages.entity.Void
 config/EnvConfig.java
  config.EnvConfig
+utils/Random.java
+ utils.Random
 pages/BasicPage.java
  pages.BasicPage

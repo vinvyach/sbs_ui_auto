@@ -8,6 +8,7 @@ import org.springframework.web.client.RestTemplate;
 import pages.BasicPage;
 import pages.RegistrationPage;
 import pages.entity.Code;
+import utils.Random;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -77,7 +78,8 @@ public class BasicPageDef {
     }
 
     public ResponseEntity<Code> send() {
-        String phoneNumber = UserConfig.USER_PHONE_NUMBER;
+//        String phoneNumber = UserConfig.USER_PHONE_NUMBER;
+        String phoneNumber = Random.getPhone();
         String resourceUrl = UserConfig.GET_CODE_URL;
 
         ResponseEntity<Code> response
@@ -93,7 +95,7 @@ public class BasicPageDef {
 
         // request body parameters
         Map<String, String> map = new HashMap<>();
-        map.put("phone", UserConfig.USER_PHONE_NUMBER);
+        map.put("phone", Random.getPhone());
 
         // send POST request
         ResponseEntity<Void> response = restTemplate.postForEntity(url, map, Void.class);

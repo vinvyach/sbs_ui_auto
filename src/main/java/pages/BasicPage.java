@@ -73,6 +73,12 @@ public class BasicPage {
     }
 
     public void clickButtonCheckCode(String arg0) {
+
+        /**
+         * До получения икс паса с кнопкой "получить код", например,
+         * мы должны добраться до какой-либо кнопки например в футере
+         */
+
         $(By.xpath("//*[@id=\"individual-form\"]/div[3]/div[3]/button/span")).click();
     }
 

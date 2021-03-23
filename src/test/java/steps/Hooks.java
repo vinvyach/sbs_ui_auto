@@ -1,6 +1,8 @@
 package steps;
 
+import com.codeborne.selenide.Configuration;
 import io.cucumber.java.Before;
+import org.junit.BeforeClass;
 import pages.BasicPage;
 import pages.RegistrationPage;
 
@@ -32,5 +34,14 @@ public class Hooks {
 //        }
 //
 //    }
+
+
+    @Before
+    public void resizeBrowser() {
+        Configuration.browser = "chrome";
+//        Configuration.browserPosition = "1921x0";
+        Configuration.browserSize = "1920x1080";
+
+    }
 
 }

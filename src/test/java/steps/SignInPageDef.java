@@ -4,6 +4,7 @@ import config.UserConfig;
 import io.cucumber.java.en.Then;
 import org.apache.commons.lang3.RandomStringUtils;
 import pages.SignInPage;
+import utils.Random;
 
 import static app_context.RunContext.*;
 
@@ -48,7 +49,7 @@ public class SignInPageDef {
 
     @Then("Input Phone Number")
     public void inputPhoneNumber() {
-        String phoneNumber = UserConfig.USER_PHONE_NUMBER;
+        String phoneNumber = Random.newPhone();
         signInPage.inputPhoneNumber(phoneNumber);
         put("PhoneNumber", phoneNumber);
     }
