@@ -80,9 +80,14 @@ public class BasicPage {
          */
 
 
-
         $(By.xpath("//*[@id=\"individual-form\"]/div[3]/div[3]/button/span")).click();
     }
+
+
+    /**
+     * .scrollTo(); опускает страницу донельзя, находит кнопку тимвьювер и позиционирует её
+     * как мне надо, а не как это написал девелопер хрома нах!
+     */
 
     public void clickButtonReg(String arg0) {
         $(By.xpath("//*[@id=\"__next\"]/section/footer/div/div[1]/div[4]/div[2]/a/button/span")).scrollTo();

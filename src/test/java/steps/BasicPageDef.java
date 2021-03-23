@@ -111,7 +111,7 @@ public class BasicPageDef {
     public void clickButtonReg(String arg0) {
         basicPage.clickButtonReg(arg0);
 
-        if (registrationPage.checkTextExist("OK")){
+        if (registrationPage.checkTextExist("OK")) {
             registrationPage.clickButtonSpan("OK");
         }
     }
