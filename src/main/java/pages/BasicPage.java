@@ -79,10 +79,15 @@ public class BasicPage {
          * мы должны добраться до какой-либо кнопки например в футере
          */
 
+
+
         $(By.xpath("//*[@id=\"individual-form\"]/div[3]/div[3]/button/span")).click();
     }
 
     public void clickButtonReg(String arg0) {
+        $(By.xpath("//*[@id=\"__next\"]/section/footer/div/div[1]/div[4]/div[2]/a/button/span")).scrollTo();
         $(By.xpath("//*[@id=\"individual-form\"]/div[6]/div[2]/button/span")).click();
+
+
     }
 }
