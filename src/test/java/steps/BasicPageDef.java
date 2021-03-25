@@ -39,8 +39,8 @@ public class BasicPageDef {
     }
 
     @Then("lk {string} button span")
-    public void lkButtonSpanb(String arg0) throws InterruptedException {
-        Thread.sleep(20000);
+    public void lkButtonSpanb(String arg0) /*throws InterruptedException*/ {
+        //Thread.sleep(5000);
         basicPage.clickButtonSpanb(arg0);
     }
 

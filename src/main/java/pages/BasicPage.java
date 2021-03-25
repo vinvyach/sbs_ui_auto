@@ -45,6 +45,7 @@ public class BasicPage {
 //    }
 
     public void clickButtonSpanb(String text) {
+        $(By.xpath("//*[@id=\"headerBottomMenu\"]/div/div/div[3]/div/div[4]/a/button/span")).scrollTo();
         $(By.xpath("//*[@id=\"headerBottomMenu\"]/div/div/div[3]/div/div[4]/a/button/span")).click();
     }
 

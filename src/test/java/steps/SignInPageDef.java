@@ -26,7 +26,7 @@ public class SignInPageDef {
 
     @Then("Input email")
     public void inputEmail() {
-        String email = "Auto_" + RandomStringUtils.randomAlphabetic(5) + "@mail.com";
+        String email = UserConfig.USER_EMAIL;
         signInPage.inputEmail(email);
         put("email", email);
 

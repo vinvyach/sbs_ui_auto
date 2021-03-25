@@ -6,13 +6,13 @@ config/UserConfig.java
  config.UserConfig
 pages/entity/Code.java
  pages.entity.Code
+utils/Random.java
+ utils.Random
 pages/RegistrationPage.java
  pages.RegistrationPage
 pages/entity/Void.java
  pages.entity.Void
 config/EnvConfig.java
  config.EnvConfig
-utils/Random.java
- utils.Random
 pages/BasicPage.java
  pages.BasicPage
