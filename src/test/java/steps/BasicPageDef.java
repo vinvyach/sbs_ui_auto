@@ -34,13 +34,15 @@ public class BasicPageDef {
     }
 
     @Then("Content with {string} visible")
-    public void contentWithVisible(String arg0) {
+    public void contentWithVisible(String arg0)
+            throws InterruptedException {
+        Thread.sleep(3000);
         basicPage.contentIsVisible(arg0);
     }
 
     @Then("lk {string} button span")
-    public void lkButtonSpanb(String arg0) /*throws InterruptedException*/ {
-        //Thread.sleep(5000);
+    public void lkButtonSpanb(String arg0) throws InterruptedException {
+        Thread.sleep(10000);
         basicPage.clickButtonSpanb(arg0);
     }
 
@@ -108,7 +110,8 @@ public class BasicPageDef {
     }
 
     @Then("Click {string} button reg")
-    public void clickButtonReg(String arg0) {
+    public void clickButtonReg(String arg0) throws InterruptedException {
+        Thread.sleep(3000);
         basicPage.clickButtonReg(arg0);
 
         if (registrationPage.checkTextExist("OK")) {
