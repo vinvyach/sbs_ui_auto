@@ -1,10 +1,10 @@
-steps/Hooks.java
- steps.Hooks
-steps/BasicPageDef.java
- steps.BasicPageDef
 steps/SignInPageDef.java
  steps.SignInPageDef
 RunCucumberTest.java
  RunCucumberTest
 steps/Post.java
  steps.Post
+steps/Hooks.java
+ steps.Hooks
+steps/BasicPageDef.java
+ steps.BasicPageDef

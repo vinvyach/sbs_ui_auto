@@ -42,7 +42,7 @@ public class BasicPageDef {
 
     @Then("lk {string} button span")
     public void lkButtonSpanb(String arg0) throws InterruptedException {
-        Thread.sleep(10000);
+        Thread.sleep(3000);
         basicPage.clickButtonSpanb(arg0);
     }
 
@@ -117,5 +117,45 @@ public class BasicPageDef {
         if (registrationPage.checkTextExist("OK")) {
             registrationPage.clickButtonSpan("OK");
         }
+    }
+
+    @Then("Click {string} button spanUL")
+    public void clickButtonSpanUL(String arg0) {
+        registrationPage.clickButtonSpanUL(arg0);
+
+    }
+
+    @Then("Click {string} buttonn spann")
+    public void clickButtonNext(String arg0) {
+        registrationPage.clickButtonNext(arg0);
+
+    }
+
+    @Then("Click {string} but")
+    public void clickBut(String arg0) throws InterruptedException {
+        Thread.sleep(3000);
+        registrationPage.clickButtonRegion(arg0);
+    }
+
+
+//    @Then("Click {string} but a")
+//    public void clickButtonA(String arg0) throws InterruptedException {
+//        Thread.sleep(3000);
+//        registrationPage.clickButtonA(arg0);
+//    }
+
+
+
+    @Then("Click {string} butt")
+    public void clickButt(String arg0) throws InterruptedException {
+        Thread.sleep(1500);
+        registrationPage.clickButtonCity(arg0);
+    }
+
+    @Then("Click {string} buton ua")
+    public void clickButonUa(String arg0) throws InterruptedException {
+        Thread.sleep(7000);
+        registrationPage.clickButtonUa(arg0);
+
     }
 }

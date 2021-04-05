@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.commands.SelectOptionByValue;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -13,6 +14,13 @@ public class SignInPage {
     private SelenideElement lastNameInput = $(By.cssSelector("#lastName"));
     private SelenideElement phoneNumberInput = $(By.cssSelector("#phone"));
     private SelenideElement firstNameInput = $(By.cssSelector("#firstName"));
+    private SelenideElement companyNameInput = $(By.cssSelector("#companyName"));;
+    private SelenideElement companyINNInput = $(By.cssSelector("#inn"));;
+    private SelenideElement companyCityInput = $(By.cssSelector("#legalAddress-city"));;
+    private SelenideElement companyUlicaInput = $(By.cssSelector("#legalAddress-street"));;
+    private SelenideElement companyDomInput = $(By.cssSelector("#legalAddress-house"));;
+
+//    private SelenideElement companyRegion = $(By.cssSelector("#legalAddress-region")).selectOptionByValue("Алтайский край"));
 
     public void inputLogin(String text) {
         this.loginInput.val(text);
@@ -38,4 +46,23 @@ public class SignInPage {
         firstNameInput.val(text);
     }
 
+    public void inputCompanyName(String text) {
+        companyNameInput.val(text);
+    }
+
+    public void inputCompanyINN(String text) {
+        companyINNInput.val(text);
+    }
+
+    public void inputCompanyCity(String text) {
+        companyCityInput.val(text);
+    }
+
+    public void inputCompanyUlica(String text) {
+        companyUlicaInput.val(text);
+    }
+
+    public void inputCompanyDom(String text) {
+        companyDomInput.val(text);
+    }
 }
