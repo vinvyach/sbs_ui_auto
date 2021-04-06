@@ -1,11 +1,13 @@
 package pages;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 
 /**
@@ -29,7 +31,6 @@ public class RegistrationPage {
     }
 
 
-
     public void clickButtonSpanUL(String text) {
         $(By.xpath("//*[@id=\"__next\"]/section/main/div/div/div[3]/div/div[1]/div/menu/ul/li[2]")).click();
 
@@ -41,36 +42,14 @@ public class RegistrationPage {
     }
 
     public void clickButtonRegion(String text) {
-
-        $("#entity-form > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div > div > div > div").click ();
-        $("#entity-form > div:nth-child(73) > div > div > div > div:nth-child(2) > div > div > div:nth-child(1) > div").click ();
-        $("/html/body/div[6]/div/div/div/div[2]/div/div/div[1]/div").selectOptionContainingText("Алтайский край");
+        SelenideElement parentDiv = $(By.id("legalAddress-region"));
+        parentDiv.scrollTo().click();
+        SelenideElement listDiv = $(By.className("ant-select-item-option-content"));
+        listDiv.click();
     }
 
 
-
-//    /**
-//     *
-//     * попытка кликнуть на "Алтайский край", поэтому clickButtnA - A - Алтайский шаг - Then Click "A" but a
-//     */
-//
-//
-//    public void clickButtonA(String text) {
-//        $(By.xpath("/html/body/div[6]/div/div/div/div[2]/div/div/div[1]/div")).click();
-//    }
-
-
-
-//    public void clickButtonRegion(String arg0) {
-//        SelenideElement select;
-//        $("/html/body/div[6]/div/div/div/div[2]/div/div/div[1]/div").selectOptionContainingText("Алтайский край"););
-//        select.val("Алтайский край");
-
-
-
-
     /**
-     *
      * Шаг - Then Click "Gorod" butt
      */
 
@@ -80,7 +59,6 @@ public class RegistrationPage {
     }
 
     /**
-     *
      * Then Click "Совпадает с ЮА" buton ua
      */
 

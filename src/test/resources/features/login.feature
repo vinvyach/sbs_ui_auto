@@ -38,8 +38,7 @@ Feature: Login User
     Then Input companyName
     Then Input companyINN
     Then Click "Next" buttonn spann
-#    Then Click "Region" but
-#    Then Click "A" but a
+    Then Click "Region" but
     Then Click "Gorod" butt
     Then Input Gorod
     Then Input Ulica

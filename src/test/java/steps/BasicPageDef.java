@@ -138,14 +138,6 @@ public class BasicPageDef {
     }
 
 
-//    @Then("Click {string} but a")
-//    public void clickButtonA(String arg0) throws InterruptedException {
-//        Thread.sleep(3000);
-//        registrationPage.clickButtonA(arg0);
-//    }
-
-
-
     @Then("Click {string} butt")
     public void clickButt(String arg0) throws InterruptedException {
         Thread.sleep(1500);
