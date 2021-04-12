@@ -8,17 +8,35 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class SignInPage {
     private SelenideElement loginInput = $(By.cssSelector("#login-form_emailOrPhone"));
+
     private SelenideElement passwordInput = $(By.cssSelector("#login-form_password"));
 
     private SelenideElement emailInput = $(By.cssSelector("#organization-email"));
+
     private SelenideElement lastNameInput = $(By.cssSelector("#lastName"));
+
     private SelenideElement phoneNumberInput = $(By.cssSelector("#phone"));
+
     private SelenideElement firstNameInput = $(By.cssSelector("#firstName"));
-    private SelenideElement companyNameInput = $(By.cssSelector("#companyName"));;
-    private SelenideElement companyINNInput = $(By.cssSelector("#inn"));;
-    private SelenideElement companyCityInput = $(By.cssSelector("#legalAddress-city"));;
-    private SelenideElement companyUlicaInput = $(By.cssSelector("#legalAddress-street"));;
-    private SelenideElement companyDomInput = $(By.cssSelector("#legalAddress-house"));;
+
+    private SelenideElement companyNameInput = $(By.cssSelector("#companyName"));
+    ;
+    private SelenideElement companyINNInput = $(By.cssSelector("#inn"));
+    ;
+    private SelenideElement companyCityInput = $(By.cssSelector("#legalAddress-city"));
+    ;
+    private SelenideElement companyUlicaInput = $(By.cssSelector("#legalAddress-street"));
+    ;
+    private SelenideElement companyDomInput = $(By.cssSelector("#legalAddress-house"));
+    ;
+    private SelenideElement bankNameInput = $(By.cssSelector("#name"));
+
+    private SelenideElement bankChInput = $(By.cssSelector("#bankAccount"));
+    ;
+    private SelenideElement bankBikInput = $(By.cssSelector("#rcbic"));
+    ;
+    private SelenideElement bankCchInput = $(By.cssSelector("#correspondentAccount"));
+    ;
 
 //    private SelenideElement companyRegion = $(By.cssSelector("#legalAddress-region")).selectOptionByValue("Алтайский край"));
 
@@ -64,5 +82,21 @@ public class SignInPage {
 
     public void inputCompanyDom(String text) {
         companyDomInput.val(text);
+    }
+
+    public void inputBankName(String text) {
+        bankNameInput.val(text);
+    }
+
+    public void inputBankCh(String text) {
+        bankChInput.val(text);
+    }
+
+    public void inputBankBik(String text) {
+        bankBikInput.val(text);
+    }
+
+    public void inputBankCch(String text) {
+        bankCchInput.val(text);
     }
 }

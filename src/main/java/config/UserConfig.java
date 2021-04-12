@@ -11,9 +11,13 @@ public class UserConfig {
     public static final String COMPANY_NAME = "_UL_Auto";
     public static final String COMPANY_INN = "123456789012";
     //public static final String COMPANY_Region = "Алтайский край";
-    public static final String COMPANY_CITY = "Барнаул";
-    public static final String COMPANY_ULICA = "Ленина";
+//    public static final String COMPANY_CITY = "Барнаул";
+//    public static final String COMPANY_ULICA = "Ленина";
     public static final String COMPANY_DOM = "123";
+    public static final String BANK_NAME = "ПАО Сбербанк";
+    public static final String BANK_RCH = "55112210000000000000";
+    public static final String BANK_BIK = "044525225";
+    public static final String BANK_CCH = "30101810400000000225";
 
 
     //public static final String DEL_USER_URL = "http://192.168.67.31/api/autotest/delete-client";

@@ -65,33 +65,57 @@ public class SignInPageDef {
 
     @Then("Input companyINN")
     public void inputCompanyINN() {
-        String companyINN = UserConfig.COMPANY_INN;
-        signInPage.inputCompanyINN(companyINN);
-        put("companyINN", companyINN);
+        String companyInn = Random.newInn();
+        signInPage.inputCompanyINN(companyInn);
+        put("companyInn", companyInn);
     }
 
 
-    @Then("Input Gorod")
-    public void inputGorod() throws InterruptedException {
-        String companyCity = UserConfig.COMPANY_CITY;
-        Thread.sleep(3000);
+    @Then("Input city: {string}")
+    public void inputGorod(String companyCity) throws InterruptedException {
+//        Thread.sleep(3000);
         signInPage.inputCompanyCity(companyCity);
         put("companyCity", companyCity);
     }
 
-    @Then("Input Ulica")
-    public void inputUlica() throws InterruptedException {
-        String companyUlica = UserConfig.COMPANY_ULICA;
-        Thread.sleep(3000);
+    @Then("Input ulica: {string}")
+    public void inputUlica(String companyUlica) throws InterruptedException {
+//        Thread.sleep(3000);
         signInPage.inputCompanyUlica(companyUlica);
         put("companyUlica", companyUlica);
     }
 
-    @Then("Input Dom")
-    public void inputDom() throws InterruptedException {
-        String companyDom = UserConfig.COMPANY_DOM;
-        Thread.sleep(3000);
+    @Then("Input Dom: {string}")
+    public void inputDom(String companyDom) throws InterruptedException {
+//        Thread.sleep(3000);
         signInPage.inputCompanyDom(companyDom);
         put("companyDom", companyDom);
+    }
+
+    @Then("Input Bank Name: {string}")
+    public void inputBankName(String bankName) {
+        signInPage.inputBankName(bankName);
+        put("bankName", bankName);
+    }
+
+    @Then("Input RCH")
+    public void inputRCH() {
+        String bankRch = Random.newRCh();
+        signInPage.inputBankCh(bankRch);
+        put("bankRch", bankRch);
+    }
+
+    @Then("Input BIK")
+    public void inputBIK() {
+        String bankBik = UserConfig.BANK_BIK;
+        signInPage.inputBankBik(bankBik);
+        put("bankBik", bankBik);
+    }
+
+    @Then("Innput CCH")
+    public void innputCCH() {
+        String bankCch = UserConfig.BANK_CCH;
+        signInPage.inputBankCch(bankCch);
+        put("bankCch", bankCch);
     }
 }
